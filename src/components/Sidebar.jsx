@@ -1,15 +1,32 @@
-function Navbar() {
+import { useState } from 'react'
 
+function Sidebar() {
+
+        const [sidebarOpen, setSidebarOpen] = useState(false);
+
+        const handleSidebarOpen = () => {
+            setSidebarOpen(true);
+        };
+
+        const handleSidebarClose = () => {
+            setSidebarOpen(false);
+        };
 
     return (
-        <nav>
+        <menu>
             <div>
-                <a href=""><p>Home</p></a>
-                <a href=""><p>About Page</p></a>
+                {!sidebarOpen ? (
+                    <div onMouseEnter={handleSidebarOpen}>
+                        <i></i>
+                    </div>
+                ) : (
+                    <>
+                    </>
+                )}
             </div>
-        </nav>
+        </menu>
     )
 
 }
 
-export default Navbar;
+export default Sidebar;
