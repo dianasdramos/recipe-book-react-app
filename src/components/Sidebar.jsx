@@ -16,9 +16,11 @@ function Sidebar() {
         <menu>
             <div className="sidebar">
                 {!sidebarOpen ? (
+                    // when the sidebar is closed, we only show the icon. And when is open, we show the icon and the text of the items
                     <div className="sidebar-icon" onMouseEnter={handleSidebarOpen}>
                     </div>
                 ) : (
+                    // sidebar collapsed when the pointer goes out of the sidebar
                     <div onMouseLeave={handleSidebarClose}>
                         <div className="sidebar-icon">
                         </div>
