@@ -14,13 +14,29 @@ function Sidebar() {
 
     return (
         <menu>
-            <div>
+            <div className="sidebar">
                 {!sidebarOpen ? (
                     <div onMouseEnter={handleSidebarOpen}>
-                        <i></i>
                     </div>
                 ) : (
                     <>
+                    <div onMouseEnter={handleSidebarClose}>
+                    </div>
+                    <div>
+                        <div>
+                            <p>About</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Recipes</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>My Area</p>
+                        </div>
+                    </div>
                     </>
                 )}
             </div>
