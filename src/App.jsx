@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import About from "./pages/about";
 import RecipeDetails from "./pages/RecipeDetails";
 import Error from './pages/Error';
+import './App.css'
 function App() {
   return (
     <main>

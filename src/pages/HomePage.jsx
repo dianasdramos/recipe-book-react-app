@@ -1,3 +1,4 @@
+
 import foodData from "../data/data.json";
 import Carousel from "../components/Carousel";
 import { Link } from "react-router-dom";

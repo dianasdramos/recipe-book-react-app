@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,9 +23,12 @@ function Carousel({ cardsData }) {
 
   return (
     <>
+    <div className = "carousel-div">
       <button onClick={previousCard}>Left</button>
       <article key={cardsData[card].id}>
+      <div className="carousel-container">
         <Link id="bigCard" to={`/foods/${cardsData[card].id}`}>
+
           <div id="bigFoodPicture">
             <img src={cardsData[card].image} alt={cardsData[card].name} />
           </div>
@@ -33,9 +37,22 @@ function Carousel({ cardsData }) {
             <p>Calories: {cardsData[card].calories}</p>
             <p>Servings: {cardsData[card].servings}</p>
           </div>
-        </Link>
+          </Link>
+          <Link>
+          <div id="bigFoodPicture">
+            <img src={cardsData[card+1].image} alt={cardsData[card].name} />
+          </div>
+          <div>
+            <h3>{cardsData[card+1].name}</h3>
+            <p>Calories: {cardsData[card+1].calories}</p>
+            <p>Servings: {cardsData[card+1].servings}</p>
+          </div>
+          </Link>
+          </div>
+
       </article>
       <button onClick={nextCard}>Right</button>
+      </div>
     </>
   );
 }

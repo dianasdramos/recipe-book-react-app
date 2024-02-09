@@ -1,14 +1,16 @@
-#root {
+body {
   margin: 0;
+  background-color: aquamarine;
+  display: flex;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  width: 100%;
 }
 footer {
   display: flex;
   flex-direction: column;
   align-items: center; /* Align items vertically in the center */
-  background-color: #E2D4B7;
+  background-color: #e2d4b7;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -26,7 +28,7 @@ footer img {
   margin: 0 10px; /* Adjust spacing between links */
   color: black;
 }
-footer hr{
+footer hr {
   height: 5px;
   color: black;
   width: 100%;
@@ -34,7 +36,7 @@ footer hr{
 nav {
   display: flex;
   align-items: center; /* Align items vertically in the center */
-  background-color: #E2D4B7;
+  background-color: #e2d4b7;
   width: 100%;
 }
 nav img {
@@ -46,7 +48,7 @@ nav img {
   align-items: center;
   justify-content: flex-start;
   margin: 20px;
- width: 100%;
+  width: 100%;
 }
 .navbar-container a {
   margin: 0 10px; /* Adjust spacing between links */
@@ -62,7 +64,15 @@ nav img {
   justify-content: center;
   margin: 10px;
   width: 100%;
-  }
+}
+
+.carousel-div{
+  display: flex;
+}
+
+.carousel-container{
+  display: flex;
+}
 #hero img {
   width: 1180px;
   height: 632px;
