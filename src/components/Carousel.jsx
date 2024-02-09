@@ -11,7 +11,7 @@ function Carousel({ cardsData }) {
 
   const nextCard = () => {
     if (card < cardsData.length - 1) {
-      setCard(card + 1);
+      setCard((card + 1) % cardsData.length);
     }
   };
 
