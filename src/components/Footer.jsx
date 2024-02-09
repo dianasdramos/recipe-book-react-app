@@ -1,20 +1,27 @@
+import linkedin from "../assets/images/linkedin.png";
+import github from "../assets/images/github.png";
 function Footer() {
+  return (
+    <footer>
+      <div className="firstLine">
+        <img src={linkedin} />
 
-
-    return (
-        <footer>
-            <div className="container">
-            <img src="/src/assets/images/linkedin_3536569.png" />
-
-                <a href="https://www.linkedin.com/in/gabrielavieira-da--silva/"><b>Gabriela Silva</b></a>
-                <a href="https://www.linkedin.com/in/dianaramos/"><b>Diana Ramos</b></a>
-            </div>
-            <div>
-                <p>2024 Ironhack</p>
-            </div>
-        </footer>
-    )
-
+        <a href="https://www.linkedin.com/in/gabrielavieira-da--silva/">
+          <b>Gabriela Silva</b>
+        </a>
+        <a href="https://www.linkedin.com/in/dianaramos/">
+          <b>Diana Ramos</b>
+        </a>
+      </div>
+      <div className="secondLine">
+        <img src={github} alt="github icon" />
+        <a href="https://github.com/dianasdramos/recipe-book-react-app">
+          
+          Repository - 2024
+        </a>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
