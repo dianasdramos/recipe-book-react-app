@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from "react-router-dom";
 
 function Sidebar() {
 
@@ -25,15 +26,18 @@ function Sidebar() {
                         <div className="sidebar-icon">
                         </div>
                         <div className="sidebar-items">
-                            <div className="sidebar-item">
+                            <Link to="/about"><div className="sidebar-item">
                                 <p>About</p>
                             </div>
-                            <div className="sidebar-item">
+                            </Link>
+                            <Link to="/recipes"><div className="sidebar-item">
                                 <p>Recipes</p>
                             </div>
-                            <div className="sidebar-item">
+                            </Link>
+                            <Link to="/myarea"><div className="sidebar-item">
                                 <p>My Area</p>
                             </div>
+                            </Link>
                         </div>
                     </div>
                 )}

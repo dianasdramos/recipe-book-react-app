@@ -1,4 +1,7 @@
-function RecipeDetailsPage() {
+function RecipeDetailsPage({
+    
+}) {
+
     
     return (
         <>
