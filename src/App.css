@@ -1,3 +1,4 @@
+/* Body */
 body {
   margin: 0;
   background-color: aquamarine;
@@ -6,6 +7,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* Footer */
+
 footer {
   display: flex;
   flex-direction: column;
@@ -33,6 +37,9 @@ footer hr {
   color: black;
   width: 100%;
 }
+
+/* Nav */
+
 nav {
   display: flex;
   align-items: center; /* Align items vertically in the center */
@@ -57,6 +64,8 @@ nav img {
 .navbar-container h3 {
   width: 50%;
 }
+/* Home page */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -115,6 +124,10 @@ nav img {
   width: 150px;
   height: 150px;
 }
+
+/* Sidebar
+ */
+
 .sidebar {
   position: fixed;
   top: 0;

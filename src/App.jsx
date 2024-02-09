@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import HomePage from "./pages/HomePage";
 import About from "./pages/about";
 import RecipeDetails from "./pages/RecipeDetails";
+import Recipes from "./pages/Recipes";
 import Error from './pages/Error';
 import './App.css'
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element = {<HomePage />} />
         <Route path="/about" element = {<About />} />
+        <Route path="/recipes" element = {<Recipes />} />
         <Route path="/recipeDetails" element = {<RecipeDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>

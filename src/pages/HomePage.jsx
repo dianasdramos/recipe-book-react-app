@@ -33,6 +33,7 @@ function HomePage() {
                   <div>
                     <h3>{food.name}</h3>
                     <p>Calories: {food.calories}</p>
+                    <p>Servings: {food.servings}</p>
                   </div>
                 </Link>
               </article>
