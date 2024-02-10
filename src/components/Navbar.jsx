@@ -2,6 +2,8 @@ import menu from "../assets/images/menu.png"
 import search from "../assets/images/search.png"
 import more from "../assets/images/more.png"
 import Sidebar from "../components/Sidebar"
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
 
@@ -15,8 +17,8 @@ function Navbar() {
                 <h3><b>Page Title</b></h3>
             </div>
             <div className="menuRight">
-                <a href=""><img src={search} alt="" /></a>
-                <a href=""><img src={more} alt="" /></a>
+                <Link id="searchIcon" to="/recipes"><img src={search} alt="search icon leads to recipes page" /></Link>
+                <Link to="/about"><img src={more} alt="more icon leads to about us page" /></Link>
             </div>
         </nav>
     )
