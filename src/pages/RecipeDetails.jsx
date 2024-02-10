@@ -1,21 +1,18 @@
-function RecipeDetailsPage({
-    
-}) {
+import {useParams} from "react-router-dom";
 
-    
+function RecipeDetails(props) {
+    const { recipe } = props;
+
     return (
-        <>
+        <div className="RecipeCard">
+            <h3>{recipe.name}</h3>
+            <p>Calories: {recipe.calories}</p>
+            <p>Servings: {recipe.servings}</p>
             <div>
-                <div>
-                    <h2>Recipe name</h2>
-                    <img src="" alt="" />
-                    <p>calories</p>
-                    <p>servings</p>
-                </div>
+                <button>Go to Recipes</button>
             </div>
-            <button>Back</button>
-        </>
-    )
+        </div>
+    );
 }
 
-export default RecipeDetailsPage
+export default RecipeDetails;

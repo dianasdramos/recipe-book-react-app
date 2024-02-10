@@ -27,7 +27,7 @@ function Filter({ filtered, setFilteredData, toggleFavorite }) {
 
   return (
     <>
-      <div className="Filter-container">
+      <div className="filter-container">
         <button onClick={caloriesBtn}>Filter by Calories</button>
         <button onClick={likedBtn}>Filter by Liked</button>
         <button onClick={resetFilter}>Clear filter</button>
