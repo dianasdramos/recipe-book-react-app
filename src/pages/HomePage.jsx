@@ -6,22 +6,21 @@ import Carousel from "../components/Carousel";
 import Filter from "../components/Filter";
 import hero from "../assets/images/hero2.jpg";
 import AddRecipe from "../components/UploadRecipe";
+import RecipeDetails from "./RecipeDetails";
 
 function HomePage() {
   const [filteredData, setFilteredData] = useState(foodData);
   const [showAll, setShowAll] = useState(true);
+  const [recipes, setRecipes] = useState(foodData);
 
-  const addNewRecipe = (newRecipe) => {
-    foodData.push(newRecipe);
-  };
+  function addNewRecipe(newRecipe) {
+    setRecipes(setRecipes => [...setRecipes, newRecipe]);
+  }
 
-
-
-  // Function to toggle favorite
   const toggleFavorite = (id) => {
     const updatedData = filteredData.map((foodItem) => {
       if (foodItem.id === id) {
-        return { ...foodItem, liked: !foodItem.liked }; // Toggle liked status
+        return { ...foodItem, liked: !foodItem.liked }; 
       }
       return foodItem;
     });
@@ -44,6 +43,9 @@ function HomePage() {
         <div>
           <h3>Add Your recipe</h3>
           <AddRecipe addNewRecipe={addNewRecipe} />
+          {recipes.map((recipe) => {
+            return <RecipeDetails key={recipe._id} recipe={recipe} />;
+          })}
         </div>
         <section className="container">
           <div>

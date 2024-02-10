@@ -147,29 +147,7 @@ footer hr {
 .favoriteButton {
   margin-left: 20px;
 }
-#smallCardGrid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  width: 100%;
-  background-color: whitesmoke;
-}
-#smallCard {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 150px;
-  height: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  justify-content: space-around;
-  padding: 20px;
-}
-#smallFoodPicture img {
-  width: 150px;
-  height: 150px;
-}
+
 
 /* Pages*/
 
@@ -202,5 +180,47 @@ footer hr {
   left: 32%;
   text-align: center;
 }
+
+.Filter-container button {
+  margin: 10px;
+  justify-content: center;
 }
 
+#smallCardGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#smallCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 290px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: space-around;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+
+.heartIconContainer {
+  display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+}
+
+.smallCardText{
+  color: black;
+  text-decoration: none;
+}
+
+#smallFoodPicture img {
+  width: 150px;
+  height: 150px;
+}

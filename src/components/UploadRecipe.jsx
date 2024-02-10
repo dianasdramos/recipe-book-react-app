@@ -5,22 +5,16 @@ function AddRecipe(props) {
   const [calories, setCalories] = useState(0);
   const [image, setImage] = useState(null);
   const [servings, setServings] = useState(0);
-  const [imageFile, setImageFile] = useState(null); // To store the uploaded file
-  const [imagePreview, setImagePreview] = useState(""); // To display a preview of the uploaded image
+  const [imageFile, setImageFile] = useState(null); 
+  const [imagePreview, setImagePreview] = useState(""); 
 
-  function handleSubmit(e){
-    // Prevent Default Action of a Form' submission (refresh the page).
-    // Why? With the refresh of a page, the state values go to original values. 
-
+  function handleSubmit(e) {
     e.preventDefault();
 
-    // Create a new Object with name, calories, image, servings properties
-    const newRecipe = {name, calories: Number(calories), image, servings};
+    const newRecipe = { name, calories: Number(calories), image, servings };
 
-    // This way, we add the new movie to the movie list parent component.
     props.addNewRecipe(newRecipe);
 
-    // Reset the state, so I don't have to delete all the fields if I want to create a second new Movie.
     setName("");
     setCalories(0);
     setImage(null);
@@ -36,14 +30,14 @@ function AddRecipe(props) {
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <label>name</label>
+        <label>Recipe Name</label>
         <input
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label>calories</label>
+        <label>Calories</label>
         <input
           type="text"
           name="calories"
@@ -61,11 +55,11 @@ function AddRecipe(props) {
         <input
           type="number"
           name="servings"
-          checked={servings}
+          value={servings}
           onChange={(e) => setServings(e.target.value)}
         />
 
-        <button type="submit">Add a Recipe</button>
+        <button type="submit">Add</button>
       </form>
     </section>
   );
