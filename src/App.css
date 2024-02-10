@@ -125,6 +125,7 @@ footer hr {
   padding: 20px;
   background-color: whitesmoke;
   margin: 5px;
+  border-radius: 5px;
 }
 .arrow {
   display: flex;
