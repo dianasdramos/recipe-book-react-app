@@ -1,25 +1,60 @@
 import foodData from "../data/data.json";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 function Recipes() {
+  const [recipesList, setRecipesList] = useState(foodData);
 
+  function addNewRecipe(newRecipe) {
+    setRecipesList((prevRecipes) => [...prevRecipes, newRecipe]);
+  }
+
+  const getLabel = (calories) => {
+      if (calories <= 175) {
+          return <label className="labelLowCalories">Low calories</label>;
+      } else if (calories >= 450) {
+          return <label className="labelHighCalories">High calories</label>;
+      }
+  }
+
+  const deleteRecipe = foodId => {
+    let filteredRecipes = recipesList.filter(food => {
+      return food.id !== foodId;
+    });
+
+    setRecipesList(filteredRecipes);
+  }
 
   return (
-    <section className="container">
-      <div id="smallCardGrid">
-        {foodData.map((food) => {
+    <section className="recipes">
+      <section className="containerNewRecipe">
+        <div>
+          <h3>Add Your recipe</h3>
+          <AddRecipe addNewRecipe={addNewRecipe} />
+        </div>
+      </section>
+      <h1>Recipes Book</h1>
+      <div id="recipesCardGrid">
+        {recipesList.map((food) => {
           return (
             <article key={food.id}>
-              <Link id="smallCard" to={`/foods/${food.id}`}>
-                <div id="smallFoodPicture">
+              {/* Pass the food object in Link state attribute. This will be used in recipeDetails page to access the food data. 
+              With this we do noot need to load (import) the data.json again  */}
+              <Link id="recipeCard" to='/recipeDetails' state={food}>
+                <div id="recipeFoodPicture">
                   <img src={food.image} />
                 </div>
                 <div>
-                  <h3>{food.name}</h3>
+                  <h3 id="recipeName">{food.name}</h3>
                   <p>Calories: {food.calories}</p>
+                  {getLabel(food.calories)}
                   <p>Servings: {food.servings}</p>
                 </div>
+                <div>
+                  <button onClick={(e) => { e.preventDefault(); deleteRecipe(food.id);}} id="deleteRecipe">Delete</button>
+                </div>
               </Link>
+              
             </article>
           );
         })}

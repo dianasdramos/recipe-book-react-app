@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import HomePage from "./pages/HomePage";
-import About from "./pages/about";
+import About from "./pages/About";
 import RecipeDetails from "./pages/RecipeDetails";
 import Recipes from "./pages/Recipes";
 import Error from './pages/Error';
