@@ -8,6 +8,7 @@ import RecipeDetails from './pages/RecipeDetails';
 import Recipes from './pages/Recipes';
 import Error from './pages/Error';
 import './App.css';
+import recipes from "./data/data.json"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+        <Route path="/recipes/:recipeId" element={<RecipeDetails recipes={recipes} />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Sidebar />

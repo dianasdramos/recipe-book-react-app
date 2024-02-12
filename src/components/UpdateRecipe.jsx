@@ -1,24 +1,42 @@
-import {useState} from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect } from 'react';
 
-function AddRecipe(props) {
+function UpdateRecipe(props) {
   const [name, setName] = useState("");
   const [calories, setCalories] = useState(0);
   const [image, setImage] = useState(null);
   const [servings, setServings] = useState(0);
-  const [imageFile, setImageFile] = useState(null); 
-  const [imagePreview, setImagePreview] = useState(""); 
+  const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState("");
+
+
+  const { recipeId } = useParams();
+  const { recipe } = props;
+
+    
+    if (recipe) {
+      const { name, calories, image, servings } = recipe;
+      setName(name);
+      setCalories(calories);
+      setImage(image);
+      setServings(servings);
+      setImagePreview(image);
+    }
+
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    const newRecipe = { name, calories: Number(calories), image, servings };
+    const updatedRecipe = { name, calories, image, servings };
+	props.updateRecipe(updatedRecipe);
 
-    props.addNewRecipe(newRecipe);
-
+    // Clear form fields after submission
     setName("");
     setCalories(0);
     setImage(null);
     setServings(0);
+    setImageFile(null);
+    setImagePreview("");
   }
 
   function handleImageChange(e) {
@@ -59,10 +77,10 @@ function AddRecipe(props) {
           onChange={(e) => setServings(e.target.value)}
         />
 
-        <button type="submit">Add</button>
+        <button type="submit">Update</button>
       </form>
     </section>
   );
 }
 
-export default AddRecipe;
+export default UpdateRecipe;

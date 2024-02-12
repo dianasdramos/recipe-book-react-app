@@ -1,12 +1,13 @@
 import foodData from "../data/data.json";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import AddRecipe from "../components/AddRecipe";
 
 function Recipes() {
   const [recipesList, setRecipesList] = useState(foodData);
 
   function addNewRecipe(newRecipe) {
-    setRecipesList((prevRecipes) => [...prevRecipes, newRecipe]);
+    setRecipesList((addRecipes) => [...addRecipes, newRecipe]);
   }
 
   const getLabel = (calories) => {
@@ -34,10 +35,11 @@ function Recipes() {
         </div>
       </section>
       <h1>Recipes Book</h1>
-      <div id="recipesCardGrid">
+
         {recipesList.map((food) => {
           return (
-            <article key={food.id}>
+            <div id="recipesCardGrid" key={food.id}>
+            <article>
               {/* Pass the food object in Link state attribute. This will be used in recipeDetails page to access the food data. 
               With this we do noot need to load (import) the data.json again  */}
               <Link id="recipeCard" to='/recipeDetails' state={food}>
@@ -56,9 +58,10 @@ function Recipes() {
               </Link>
               
             </article>
+            </div>
           );
         })}
-      </div>
+
     </section>
   );
 }

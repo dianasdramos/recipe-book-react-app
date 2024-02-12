@@ -41,9 +41,9 @@ Use foodData directly in the rest of the Carousel component to render the carous
   return (
     <>
       <div className="carousel-container">
-        <a className="arrow" onClick={previousCard}>
+        <div className="arrow" onClick={previousCard}>
           <img src={left} alt="left arrow" />
-        </a>
+        </div>
         <article key={foodData[card].id}>
           <div className="carousel-div">
             <div className="card">
@@ -56,7 +56,7 @@ Use foodData directly in the rest of the Carousel component to render the carous
                 <p>Servings: {foodData[card].servings}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goRecipeBtn" to={`/foods/${foodData[card].id}`}>
+                <Link id="goRecipeBtn" to={`/recipeDetails/ ${foodData[card].id}`}>
                   <button>Go to recipe</button>
                 </Link>
                 <div className="favoriteButton">
@@ -84,7 +84,7 @@ Use foodData directly in the rest of the Carousel component to render the carous
                 <p>Servings: {foodData[card  + 1].servings}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goRecipeBtn" to={`/foods/${foodData[card  + 1].id}`}>
+                <Link id="goRecipeBtn" to={`/recipes/${foodData[card  + 1].id}`}>
                   <button>Go to recipe</button>
                 </Link>
                 <div className="favoriteButton">
@@ -100,9 +100,9 @@ Use foodData directly in the rest of the Carousel component to render the carous
             </div>
           </div>
         </article>
-        <a className="arrow" onClick={nextCard}>
+        <div className="arrow" onClick={nextCard}>
           <img src={right} alt="right arrow" />
-        </a>
+        </div>
       </div>
     </>
   );

@@ -49,7 +49,7 @@ function Filter({ filteredData, toggleFavorite }) {
                     />
                   </a>
                 </div>
-                <Link to={`/foods/${food.id}`}>
+                <Link to={`/recipes/${food.id}`}>
                   <div id="smallFoodPicture">
                     <img src={food.image} alt={`${food.name} image`} />
                   </div>

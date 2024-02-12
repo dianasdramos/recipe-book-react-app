@@ -30,10 +30,6 @@ function Sidebar() {
                                 <p>Recipes</p>
                             </div>
                             </Link>
-                            <Link to="/myarea"><div className="sidebar-item">
-                                <p>My Area</p>
-                            </div>
-                            </Link>
                             <Link to="/about"><div className="sidebar-item">
                                 <p>About</p>
                             </div>
