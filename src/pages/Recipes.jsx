@@ -42,7 +42,7 @@ function Recipes() {
             <article>
               {/* Pass the food object in Link state attribute. This will be used in recipeDetails page to access the food data. 
               With this we do noot need to load (import) the data.json again  */}
-              <Link id="recipeCard" to='/recipeDetails' state={food}>
+              <Link id="recipeCard" to={`/recipeDetails/${food.id}`} state={food}>
                 <div id="recipeFoodPicture">
                   <img src={food.image} />
                 </div>

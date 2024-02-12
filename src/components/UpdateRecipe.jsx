@@ -2,47 +2,30 @@
 import React, { useState, useEffect } from 'react';
 
 function UpdateRecipe(props) {
-  const [name, setName] = useState("");
-  const [calories, setCalories] = useState(0);
-  const [image, setImage] = useState(null);
-  const [servings, setServings] = useState(0);
-  const [imageFile, setImageFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState("");
-
-
-  const { recipeId } = useParams();
-  const { recipe } = props;
-
-    
-    if (recipe) {
-      const { name, calories, image, servings } = recipe;
-      setName(name);
-      setCalories(calories);
-      setImage(image);
-      setServings(servings);
-      setImagePreview(image);
-    }
+  const { recipe, updateRecipe } = props;
+  const id = recipe.id;
+  const [name, setName] = useState(recipe.name);
+  const [calories, setCalories] = useState(recipe.calories);
+  const [image, setImage] = useState(recipe.image);
+  const [servings, setServings] = useState(recipe.servings);
 
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    const updatedRecipe = { name, calories, image, servings };
-	props.updateRecipe(updatedRecipe);
+    const updatedRecipe = { id, name, calories, image, servings };
+	  updateRecipe(updatedRecipe);
 
     // Clear form fields after submission
-    setName("");
-    setCalories(0);
-    setImage(null);
-    setServings(0);
-    setImageFile(null);
-    setImagePreview("");
+    setName(updatedRecipe.name);
+    setCalories(updatedRecipe.calories);
+    setImage(updateRecipe.image);
+    setServings(updatedRecipe.servings);
   }
 
   function handleImageChange(e) {
     const file = e.target.files[0];
-    setImageFile(file);
-    setImagePreview(URL.createObjectURL(file));
+    setImage(URL.createObjectURL(file));
   }
 
   return (
@@ -68,7 +51,6 @@ function UpdateRecipe(props) {
           accept="image/*"
           onChange={handleImageChange}
         />
-        {imagePreview && <img src={imagePreview} alt="Preview" style={{ maxWidth: "150px", maxHeight: "150px" }} />}
         <label>Servings</label>
         <input
           type="number"

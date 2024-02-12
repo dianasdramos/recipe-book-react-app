@@ -6,8 +6,6 @@ function AddRecipe(props) {
   const [calories, setCalories] = useState(0);
   const [image, setImage] = useState(null);
   const [servings, setServings] = useState(0); 
-  const [imageFile, setImageFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState(""); 
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,8 +22,7 @@ function AddRecipe(props) {
 
   function handleImageChange(e) {
     const file = e.target.files[0];
-    setImageFile(file);
-    setImagePreview(URL.createObjectURL(file));
+    setImage(URL.createObjectURL(file));
   }
 
   return (
@@ -51,7 +48,6 @@ function AddRecipe(props) {
           accept="image/*"
           onChange={handleImageChange}
         />
-        {imagePreview && <img src={imagePreview} alt="Preview" style={{ maxWidth: "150px", maxHeight: "150px" }} />}
         <label>Servings</label>
         <input
           type="number"

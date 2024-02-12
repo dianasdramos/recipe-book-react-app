@@ -14,13 +14,13 @@ function About() {
                         <img className="profilePic" src={gabrielaSilva} />
                         <h2>Gabriela Silva</h2>
                         <p>about Gabriela</p>
-                        <a href=""></a>
+                        <Link href="https://www.linkedin.com/in/gabrielavieira-da--silva/">Linkedin</Link>
                     </div>
                     <div>
                         <img className="profilePic" src={dianaRamos} />
                         <h2>Diana Ramos</h2>
                         <p>about Diana</p>
-                        <a href=""></a>
+                        <Link href="https://www.linkedin.com/in/dianaramos/">Linkedin</Link>
                     </div>
                     <div>
                         <Link to="/"><button>Back</button></Link>

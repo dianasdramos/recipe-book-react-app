@@ -26,6 +26,10 @@ function Sidebar() {
                         <div className="sidebar-icon">
                         </div>
                         <div className="sidebar-items">
+                        <Link to="/"><div className="sidebar-item">
+                                <p>Home</p>
+                            </div>
+                            </Link>
                             <Link to="/recipes"><div className="sidebar-item">
                                 <p>Recipes</p>
                             </div>
