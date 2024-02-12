@@ -3,6 +3,7 @@ import foodData from "../data/data.json";
 import Carousel from "../components/Carousel";
 import Filter from "../components/Filter";
 import hero from "../assets/images/hero2.jpg";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [filteredData, setFilteredData] = useState(foodData);// just making a copy of foodData, for the filter.
@@ -48,6 +49,10 @@ function HomePage() {
         </div>
       </section>
       <section className="container">
+      <Link id="goRecipesBtn" to={`/recipes`}>
+        <h3><a>See all recipes</a></h3>
+               
+                </Link>
         <Carousel
           filteredData={foodItemsWithLikedState}
           toggleFavorite={toggleFavorite}

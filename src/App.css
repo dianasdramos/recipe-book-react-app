@@ -32,12 +32,10 @@ nav img {
   color: black;
   margin-left: 50px;
 }
-.menuTitle{
-  width: 75%;
-  margin-left: 35px;
-}
+
 .menuRight {
   display: flex;
+  margin-left: 83%;
 }
 #searchIcon {
   margin-right: -30px;

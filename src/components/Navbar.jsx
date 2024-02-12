@@ -13,9 +13,6 @@ function Navbar() {
             <div className="menuLeft">
                 <a href={Sidebar}><img src={menu} alt="" /></a>
             </div>
-            <div className="menuTitle">
-                <h3><b>Page Title</b></h3>
-            </div>
             <div className="menuRight">
                 <Link id="searchIcon" to="/recipes"><img src={search} alt="search icon leads to recipes page" /></Link>
                 <Link to="/about"><img src={more} alt="more icon leads to about us page" /></Link>
