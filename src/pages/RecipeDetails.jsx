@@ -32,9 +32,9 @@ console.log(location)
           <p>Calories: {actualRecipe.calories}</p>
           <p>Servings: {actualRecipe.servings}</p>
         </div>
-        <div id="detailsBackButton">
-          <Link to="/recipes">
-            <button>Back</button>
+        <div>
+          <Link to="/recipes" style={{ textDecoration: 'none' }}>
+            <button id="detailsBackButton">Back</button>
           </Link>
         </div>
       </div>

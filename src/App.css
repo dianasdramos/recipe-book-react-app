@@ -276,10 +276,19 @@ form {
   align-items: center;
   justify-content: space-around;
   margin-top: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 form label, input {
   margin-right: 10px;
+}
+
+#addRecipeTitle {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 /* About*/
@@ -289,12 +298,14 @@ form label, input {
   flex-direction: column;
   align-items: center;
 }
+
 #aboutCards {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .profilePic {
   height: 250px;
   width: 250px;
@@ -303,7 +314,7 @@ form label, input {
 
 /* Recipes */
 .recipes {
-  background-color: whitesmoke;
+  background-color: #F3F9ED;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,17 +323,32 @@ form label, input {
   margin-top: 50px;
   width: 100%;
 }
+
+#recipePageTitle {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+#gridContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #recipesCardGrid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
-  width: 100%;
-  background-color: whitesmoke;
+  background-color: #F3F9ED;
 }
+
 #recipeCard {
-  width: 350px;
+  width: 380px;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
@@ -331,20 +357,66 @@ form label, input {
   flex-wrap: wrap;
   padding: 20px;
   margin-bottom: 20px;
+  background-color: whitesmoke;
 }
+
 #recipeFoodPicture img {
   height: 200px;
   width: 200px;
 }
+
+#recipeName {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#recipeCalories {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#recipeServings {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 .labelLowCalories {
   background-color: #BED1CF;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 4px;
 }
+
 .labelHighCalories {
-  background-color: #E78895;
+  background-color: #E9967A;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 4px;
 }
+
 #deleteRecipe {
   display: flex;
   margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: #808080;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#deleteRecipe:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
 }
 
 /* Recipe Details */
@@ -356,20 +428,39 @@ form label, input {
   padding: 30px;
   margin: 50px;
 }
+
 #recipeDetailsTitle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #recipeDetailsPic {
   height: 500px;
   display: flex;
 }
+
 #recipesDetailsInfo {
   display: flex;
   justify-content: center;
 }
+
 #detailsBackButton {
   display: flex;
   margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: #808080;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#detailsBackButton:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
 }

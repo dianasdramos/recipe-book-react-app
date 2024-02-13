@@ -28,29 +28,29 @@ function Recipes() {
 
   return (
     <section className="recipes">
+      <h1 id="recipePageTitle">Recipes Book</h1>
       <section className="containerNewRecipe">
         <div>
-          <h3>Add Your recipe</h3>
+          <h3 id="addRecipeTitle">Add Your Recipe</h3>
           <AddRecipe addNewRecipe={addNewRecipe} />
         </div>
       </section>
-      <h1>Recipes Book</h1>
-
+      <div id="gridContainer">
         {recipesList.map((food) => {
           return (
             <div id="recipesCardGrid" key={food.id}>
             <article>
               {/* Pass the food object in Link state attribute. This will be used in recipeDetails page to access the food data. 
               With this we do noot need to load (import) the data.json again  */}
-              <Link id="recipeCard" to={`/recipeDetails/${food.id}`} state={food}>
+              <Link id="recipeCard" style={{ textDecoration: 'none' }} to={`/recipeDetails/${food.id}`} state={food}>
                 <div id="recipeFoodPicture">
                   <img src={food.image} />
                 </div>
                 <div>
                   <h3 id="recipeName">{food.name}</h3>
-                  <p>Calories: {food.calories}</p>
+                  <p id="recipeCalories"><b>Calories:</b> {food.calories}</p>
                   {getLabel(food.calories)}
-                  <p>Servings: {food.servings}</p>
+                  <p id="recipeServings"><b>Servings:</b> {food.servings}</p>
                 </div>
                 <div>
                   <button onClick={(e) => { e.preventDefault(); deleteRecipe(food.id);}} id="deleteRecipe">Delete</button>
@@ -61,6 +61,7 @@ function Recipes() {
             </div>
           );
         })}
+        </div>
 
     </section>
   );
