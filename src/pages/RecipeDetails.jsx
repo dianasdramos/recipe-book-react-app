@@ -10,6 +10,8 @@ function RecipeDetails() {
   const location = useLocation();
   const state = location.state;
   const [actualRecipe, setActualRecipe] = useState(state);
+console.log(actualRecipe)
+console.log(location)
 
   // Like and dislike
  

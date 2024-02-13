@@ -185,8 +185,8 @@ footer hr {
 #heroText{
   display: flex;
   position: absolute;
-  bottom: 32%;
-  left: 32%;
+  bottom: 40%;
+  left: 33%;
   text-align: center;
 }
 

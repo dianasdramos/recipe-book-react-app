@@ -56,7 +56,7 @@ Use foodData directly in the rest of the Carousel component to render the carous
                 <p>Servings: {foodData[card].servings}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goRecipeBtn" to={`/recipeDetails/ ${foodData[card].id}`}>
+                <Link id="goRecipeBtn" to={`/recipeDetails/${foodData[card].id} ` } state={foodData[card]}>
                   <button>Go to recipe</button>
                 </Link>
                 <div className="favoriteButton">
@@ -84,7 +84,7 @@ Use foodData directly in the rest of the Carousel component to render the carous
                 <p>Servings: {foodData[card  + 1].servings}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goRecipeBtn" to={`/recipes/${foodData[card  + 1].id}`}>
+                <Link id="goRecipeBtn" to={`/recipeDetails/${foodData[card  + 1].id}` } state={foodData[card]}>
                   <button>Go to recipe</button>
                 </Link>
                 <div className="favoriteButton">

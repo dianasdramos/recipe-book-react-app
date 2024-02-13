@@ -15,7 +15,6 @@ function HomePage() {
   );
 
   //create first the useState function to then put the toggleFavorite function in it.
-  const [favorites, setFavorites] = useState([]);
 
   //now that we have the.liked property in each item fron the json file we can then create the toggle by id. so we create a variable that is set with the new array  with the property (foodItemsWithLikedState), where we map it to compare if the id is the same of if exists, if it is, we change the liked property by sayng !item.liked that was initially false, else we return the item without modifications. On the components we have the pictures of the hearts to change visually it, so this part of the code is on the component and not here also because there we create the divs and not here. I didn't put the toggleFavorite there because we use it here on the page.
   const toggleFavorite = (id) => {
