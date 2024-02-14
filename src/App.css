@@ -302,10 +302,13 @@ form label, input {
 
 /* About*/
 #about {
-  background-color: whitesmoke;
+  background-color: #F3F9ED;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 #aboutCards {
@@ -315,11 +318,71 @@ form label, input {
   justify-content: space-evenly;
 }
 
-.profilePic {
-  height: 250px;
-  width: 250px;
+#aboutCard {
+  width: 100%;
+  display: flex;
 }
 
+.profileCard {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profilePic {
+  height: 160px;
+  width: 160px;
+  margin-top: 10px;
+}
+
+.profileText {
+  text-align: center;  
+  width: 80%;
+  height: 220px;
+  font-size: 14px;
+}
+
+#profileLinkedin {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+#profileGit {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+#profileBackButton {
+  display: flex;
+  margin: 20px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #808080;
+  color: white;
+  transition-duration: 0.4s;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonDiv{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+#profileBackButton:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+}
 
 /* Recipes */
 .recipes {
