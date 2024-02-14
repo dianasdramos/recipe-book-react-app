@@ -49,7 +49,7 @@ function HomePage() {
       </section>
       <section className="container">
       <Link id="goRecipesBtn" to={`/recipes`}>
-        <h3><a>See all recipes</a></h3></Link>
+        <h3 id="goRecipesBtnText"><a>See all recipes</a></h3></Link>
         <Carousel
           filteredData={foodItemsWithLikedState}
           toggleFavorite={toggleFavorite}

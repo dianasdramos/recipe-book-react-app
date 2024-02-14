@@ -28,7 +28,6 @@ function Recipes() {
 
   return (
     <section className="recipes">
-      <h1 id="recipePageTitle">Recipes Book</h1>
       <section className="containerNewRecipe">
         <div>
           <h3 id="addRecipeTitle">Add Your Recipe</h3>
